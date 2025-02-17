@@ -215,6 +215,11 @@ blockquote {
   margin: 0 0 1rem;
 }
 
+.quote-icon {
+  font-size: 3rem;
+  color: #ffc800; /* Bootstrap's yellow color */
+}
+
 b,
 strong {
   font-weight: bolder;
