@@ -43,7 +43,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 255, 200, 0;
-  --bs-secondary-rgb: 108, 117, 125;
+  --bs-secondary-rgb: 15, 45, 110;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 200, 0;
@@ -10948,11 +10948,12 @@ p {
   }
 }
 header.masthead {
+  position: relative;
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/header-bg.jpg");
+  background-image: url("../img/blue_technical_background_1.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -10995,6 +10996,62 @@ header.masthead .masthead-heading {
 @media (max-width: 480px) {
   header.masthead .masthead-heading {
     font-size: 2.5rem;
+  }
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: absolute;
+  bottom: 20px; 
+  left: 0;
+  right: 0;
+  padding: 0 10px;
+  z-index: 10;
+}
+
+.logo {
+  width: 80px; /* Adjust the size of the logos */
+  height: auto;
+  opacity: 0.9;
+}
+
+.php-logo,
+.symfony-logo,
+.cake-logo,
+.zend-logo {
+    margin-left: 20px;
+    border-radius: 20%;
+}
+
+@media (max-width: 768px) {
+    .logos {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 60px;  /* Adjust size for smaller screens */
+        margin: 10px 0;
+    }
+}
+
+.logo:hover {
+  opacity: 1; /* Make the logo fully visible on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .logos {
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .logo {
+      width: 60px;  /* Adjust size for smaller screens */
+      margin: 10px 0;
   }
 }
 
