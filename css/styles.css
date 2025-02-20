@@ -10991,6 +10991,13 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
+
+@media (max-width: 480px) {
+  header.masthead .masthead-heading {
+    font-size: 2.5rem;
+  }
+}
+
 #portfolio .portfolio-item {
   max-width: 26rem;
   margin-left: auto;
