@@ -12,13 +12,22 @@ window.addEventListener('DOMContentLoaded', event => {
     // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
+        const scrollButton = document.body.querySelector('.scroll-btn');
         if (!navbarCollapsible) {
             return;
         }
         if (window.scrollY === 0) {
             navbarCollapsible.classList.remove('navbar-shrink')
+            if (scrollButton) {
+                scrollButton.style.opacity = "0"; // Button unsichtbar
+                scrollButton.style.visibility = "hidden";
+            }
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
+            if (scrollButton) {
+                scrollButton.style.opacity = "1"; // Button sichtbar machen
+                scrollButton.style.visibility = "visible";
+            }
         }
 
     };

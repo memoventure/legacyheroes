@@ -3817,9 +3817,12 @@ textarea.form-control-lg {
 }
 
 .navbar-collapse {
-  flex-basis: 100%;
-  flex-grow: 1;
-  align-items: center;
+  display: flex;
+  justify-content: flex-end; /* Verschiebt den Button nach rechts */
+}
+
+.navbar .scroll-btn {
+  margin-left: auto; /* Verhindert, dass der Button links ausgerichtet wird */
 }
 
 .navbar-toggler {
@@ -3860,6 +3863,17 @@ textarea.form-control-lg {
 .navbar-nav-scroll {
   max-height: var(--bs-scroll-height, 75vh);
   overflow-y: auto;
+}
+
+.scroll-btn {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.navbar.scrolled .scroll-btn {
+  opacity: 1;
+  visibility: visible;
 }
 
 @media (min-width: 576px) {
@@ -10949,15 +10963,13 @@ p {
 }
 header.masthead {
   position: relative;
-  padding-top: 10.5rem;
-  padding-bottom: 6rem;
-  text-align: center;
-  color: #fff;
-  background-image: url("../img/blue_technical_background_1.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
+    background-color: #003366; /* Dunkles Blau für Professionalität */
+    color: white;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
@@ -11001,10 +11013,12 @@ header.masthead .masthead-heading {
 
 .logos {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;  /* Logos in der Mitte ausrichten */
+  align-items: center;
+  gap: 30px;  /* Abstand zwischen den Logos */
   width: 100%;
   position: absolute;
-  bottom: 20px; 
+  bottom: 40px; 
   left: 0;
   right: 0;
   padding: 0 10px;
@@ -11012,9 +11026,10 @@ header.masthead .masthead-heading {
 }
 
 .logo {
-  width: 80px; /* Adjust the size of the logos */
+  width: 80px; /* Logo-Größe */
   height: auto;
   opacity: 0.9;
+  transition: all 0.3s ease;
 }
 
 .php-logo,
@@ -11043,15 +11058,15 @@ header.masthead .masthead-heading {
   transition: all 0.3s ease;
 }
 
+/* Responsive Anpassung für kleinere Bildschirme */
 @media (max-width: 768px) {
   .logos {
-      flex-direction: column;
-      justify-content: center;
+      flex-wrap: wrap; /* Logos umbrechen, wenn nicht genug Platz ist */
+      gap: 15px; /* Kleineren Abstand für Mobile */
   }
 
   .logo {
-      width: 60px;  /* Adjust size for smaller screens */
-      margin: 10px 0;
+      width: 60px;  /* Kleinere Logos für kleinere Screens */
   }
 }
 
