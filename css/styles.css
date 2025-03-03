@@ -10872,6 +10872,10 @@ p {
   margin-bottom: 4rem;
 }
 
+section#services {
+  background-color: bg-secondary;
+}
+
 @media (min-width: 768px) {
   section {
     padding: 9rem 0;
@@ -10963,9 +10967,8 @@ p {
 }
 header.masthead {
   position: relative;
-    background-color: #003366; /* Dunkles Blau für Professionalität */
     color: white;
-    height: 80vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11026,10 +11029,11 @@ header.masthead .masthead-heading {
 }
 
 .logo {
-  width: 80px; /* Logo-Größe */
+  width: auto;
   height: auto;
-  opacity: 0.9;
+  opacity: 0.5;
   transition: all 0.3s ease;
+  filter: grayscale(100%);
 }
 
 .php-logo,
