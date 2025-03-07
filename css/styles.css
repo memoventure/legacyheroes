@@ -10966,6 +10966,14 @@ section#services {
     margin-right: 0;
   }
 }
+
+@media (max-width: 991px) {
+  #mainNav .navbar-brand img {
+    height: 3rem; /* Kleinere Höhe für mobile Geräte */
+    max-width: 100%; /* Stellt sicher, dass das Bild nicht breiter als sein Container wird */
+  }
+}
+
 header.masthead {
   position: relative;
     color: white;
