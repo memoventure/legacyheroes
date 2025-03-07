@@ -10969,8 +10969,8 @@ section#services {
 
 @media (max-width: 991px) {
   #mainNav .navbar-brand img {
-    height: 3rem; /* Kleinere Höhe für mobile Geräte */
-    max-width: 100%; /* Stellt sicher, dass das Bild nicht breiter als sein Container wird */
+    height: 2rem; 
+    max-width: 100%;
   }
 }
 
